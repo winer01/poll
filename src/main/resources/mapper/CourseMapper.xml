@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.apps.poll.dao.CourseMapper">
+  <select id="findAll" resultType="com.briup.apps.poll.bean.Course">
+    select * from poll_course
+  </select>
+  
+  <delete id="deleteById" parameterType="long">
+    delete from poll_course where id=#{id}
+  </delete>
+  
+</mapper>
