@@ -6,5 +6,6 @@ import com.briup.apps.poll.bean.question;
 
 public interface QuestionMapper {
 	List<question>findAll();
+	void deleteById(long id);
 
 }

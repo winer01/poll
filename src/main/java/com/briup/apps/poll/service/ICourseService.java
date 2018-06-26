@@ -7,6 +7,7 @@ import com.briup.apps.poll.bean.Course;
 public interface ICourseService {
 	List<Course> findAll() throws Exception;
 	
-	
+	void deleteById(long id) throws Exception;
 
+	void save(Course course) throws Exception;
 }

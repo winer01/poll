@@ -10,9 +10,10 @@ import com.briup.apps.poll.dao.CourseMapper;
 import com.briup.apps.poll.service.ICourseService;
 
 @Service
-public class CourseServiceImpl implements ICourseService {
-@Autowired
-private CourseMapper courseMapper;
+	public class CourseServiceImpl implements ICourseService {
+	@Autowired
+	private CourseMapper courseMapper;
+	
 	@Override
 	/*@Override是伪代码，所以是可写可不写的．它表示方法重写，写上会给我们带来好处．
 　　　1．可以当注释用,方便阅读．
@@ -22,5 +23,22 @@ private CourseMapper courseMapper;
 		
 		return courseMapper.findAll();
 	}
+	
+	@Override
+	public void deleteById(long id) throws Exception {
+		courseMapper.deleteById(id);
+	
+	
+	}
 
+	@Override
+	public void save(Course course) throws Exception {
+		courseMapper.save(course);
+	}
+	
+	/*@Override
+	public void update(Course course) throws Exception{
+		courseMapper.update(course);
+	}
+*/
 }
